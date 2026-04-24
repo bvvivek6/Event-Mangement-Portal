@@ -15,6 +15,7 @@ export class Signup {
     firstname: '',
     lastname: '',
     email: '',
+    bio: '',
     password: '',
     phone: '',
   };

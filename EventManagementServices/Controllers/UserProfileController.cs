@@ -28,7 +28,6 @@ namespace EventManagementServices.Controllers
             }
 
             var user = _context.Users
-                .Include(u => u.Userwallet)
                 .Select(u => new 
                 {
                     u.Id,
@@ -37,7 +36,6 @@ namespace EventManagementServices.Controllers
                     u.Email,
                     u.Phone,
                     u.Bio,
-                    Wallet = u.Userwallet != null ? new { u.Userwallet.Id, u.Userwallet.Balance } : null
                 })
                 .FirstOrDefault(u => u.Id == userId);
 
