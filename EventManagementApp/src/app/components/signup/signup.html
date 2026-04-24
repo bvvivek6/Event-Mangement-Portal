@@ -1,0 +1,49 @@
+<div class="signup-container">
+    <div class="form-wrapper">
+        <h2>Sign Up</h2>
+        <div *ngIf="errorMessage" class="error-banner">
+            {{ errorMessage }}
+        </div>
+
+        <form (ngSubmit)="onSubmit()" #signupForm="ngForm">
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" name="firstname" [(ngModel)]="signupData.firstname" required
+                        class="form-control" placeholder="First Name">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" name="lastname" [(ngModel)]="signupData.lastname" required
+                        class="form-control" placeholder="Last Name">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" [(ngModel)]="signupData.email" required class="form-control"
+                    placeholder="your@email.com">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" name="phone" [(ngModel)]="signupData.phone" required class="form-control"
+                    placeholder="(123) 456-7890">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" [(ngModel)]="signupData.password" required
+                    class="form-control" placeholder="Choose a strong password">
+            </div>
+
+            <button type="submit" [disabled]="signupForm.invalid" class="btn-primary mt-3">
+                Create Account
+            </button>
+        </form>
+
+        <div class="login-link">
+            Already have an account? <a routerLink="/login">Log in</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+D:\Capstone\EventManagementDataAccessLayer\bin\Debug\net8.0\EventManagementDataAccessLayer.deps.json
+D:\Capstone\EventManagementDataAccessLayer\bin\Debug\net8.0\EventManagementDataAccessLayer.runtimeconfig.json
+D:\Capstone\EventManagementDataAccessLayer\bin\Debug\net8.0\EventManagementDataAccessLayer.dll
+D:\Capstone\EventManagementDataAccessLayer\bin\Debug\net8.0\EventManagementDataAccessLayer.pdb
+D:\Capstone\EventManagementDataAccessLayer\obj\Debug\net8.0\EventManagementDataAccessLayer.csproj.AssemblyReference.cache
+D:\Capstone\EventManagementDataAccessLayer\obj\Debug\net8.0\EventManagementDataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Capstone\EventManagementDataAccessLayer\obj\Debug\net8.0\EventManagementDataAccessLayer.AssemblyInfoInputs.cache
+D:\Capstone\EventManagementDataAccessLayer\obj\Debug\net8.0\EventManagementDataAccessLayer.AssemblyInfo.cs
+D:\Capstone\EventManagementDataAccessLayer\obj\Debug\net8.0\EventManagementDataAccessLayer.csproj.CoreCompileInputs.cache
+D:\Capstone\EventManagementDataAccessLayer\obj\Debug\net8.0\EventManagementDataAccessLayer.dll
+D:\Capstone\EventManagementDataAccessLayer\obj\Debug\net8.0\refint\EventManagementDataAccessLayer.dll
+D:\Capstone\EventManagementDataAccessLayer\obj\Debug\net8.0\EventManagementDataAccessLayer.pdb
+D:\Capstone\EventManagementDataAccessLayer\obj\Debug\net8.0\EventManagementDataAccessLayer.genruntimeconfig.cache
+D:\Capstone\EventManagementDataAccessLayer\obj\Debug\net8.0\ref\EventManagementDataAccessLayer.dll

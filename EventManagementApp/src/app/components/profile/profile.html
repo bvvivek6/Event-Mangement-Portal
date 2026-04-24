@@ -1,0 +1,31 @@
+<div class="profile-container" *ngIf="!loading">
+    <div class="profile-header">
+        <h2>User Profile</h2>
+        <button class="logout-btn" (click)="logout()">Logout</button>
+    </div>
+
+    <div *ngIf="successMessage" class="alert success">{{ successMessage }}</div>
+    <div *ngIf="errorMessage" class="alert error">{{ errorMessage }}</div>
+
+    <div class="profile-details">
+        <div class="detail-group">
+            <label>Name:</label>
+            <p>{{ userProfile?.firstname }} {{ userProfile.lastname }}</p>
+        </div>
+        <div class="detail-group">
+            <label>Email:</label>
+            <p>{{ userProfile.email }}</p>
+        </div>
+        <div class="detail-group">
+            <label>Phone:</label>
+            <p>{{ userProfile.phone || 'N/A' }}</p>
+        </div>
+        <div class="detail-group">
+            <label>Bio:</label>
+            <p>{{ userProfile.bio || 'No bio available' }}</p>
+        </div>
+    </div>
+</div>
+<div class="loading" *ngIf="!loading">
+    <p>Loading profile...</p>
+</div>

@@ -1,0 +1,20 @@
+<section class="hero-section">
+    <div class="hero-content">
+        <h1>{{ welcomeMessage }}</h1>
+        <p>Explore concerts, festivals, conferences, tech gatherings, and much more around you.</p>
+        <button class="cta-btn">Browse Events</button>
+    </div>
+</section>
+
+<section class="gallery-section">
+    <h2>Trending Near You</h2>
+    <div class="masonry-gallery">
+        <div class="masonry-item" *ngFor="let event of events">
+            <img [src]="event.imageUrl" [alt]="event.title">
+            <div class="item-overlay">
+                <h3>{{ event.title }}</h3>
+                <p>{{ event.date }}</p>
+            </div>
+        </div>
+    </div>
+</section>

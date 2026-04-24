@@ -1,0 +1,36 @@
+<div class="login-container">
+    <div class="form-wrapper">
+        <h2>Login</h2>
+        <div *ngIf="errorMessage" class="error-banner">
+            {{ errorMessage }}
+        </div>
+
+        <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" [(ngModel)]="loginData.email" required #email="ngModel"
+                    class="form-control" placeholder="Enter your email">
+                <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error-msg">
+                    Email is required.
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" [(ngModel)]="loginData.password" required
+                    #password="ngModel" class="form-control" placeholder="Enter your password">
+                <div *ngIf="password.invalid && (password.dirty || password.touched)" class="error-msg">
+                    Password is required.
+                </div>
+            </div>
+
+            <button type="submit" [disabled]="loginForm.invalid" class="btn-primary">
+                Sign In
+            </button>
+        </form>
+
+        <div class="signup-link">
+            Don't have an account? <a routerLink="/signup">Sign up</a>
+        </div>
+    </div>
+</div>
