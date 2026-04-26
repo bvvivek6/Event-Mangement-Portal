@@ -44,6 +44,28 @@
   margin-bottom: 25px;
 }
 
+.role-chip {
+  display: inline-flex;
+  margin-bottom: 16px;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  background: #e0f2fe;
+  color: #075985;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  margin: 22px 0 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
 .input-group {
   display: flex;
   flex-direction: column;
@@ -64,7 +86,21 @@
   transition: all 0.2s ease;
 }
 
+.input-group select {
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 14px;
+  background: white;
+  transition: all 0.2s ease;
+}
+
 .input-group input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.input-group select:focus {
   outline: none;
   border-color: #2563eb;
 }

@@ -1,0 +1,128 @@
+.admin-shell {
+  max-width: 1120px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+}
+
+.admin-hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.75rem;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #111827 0%, #1f2937 55%, #0f766e 100%);
+  color: #fff;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.2);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  opacity: 0.75;
+  margin-bottom: 0.5rem;
+}
+
+.admin-hero h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+.admin-hero p {
+  margin: 0;
+  max-width: 44rem;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.primary-btn,
+.secondary-btn {
+  border: none;
+  border-radius: 999px;
+  padding: 0.85rem 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background: #f97316;
+  color: white;
+}
+
+.secondary-btn {
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.stats-grid article,
+.account-card {
+  background: white;
+  border-radius: 20px;
+  padding: 1.25rem;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.stats-grid span {
+  display: block;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.stats-grid strong {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 2rem;
+  color: #0f172a;
+}
+
+.account-card {
+  margin-top: 1.25rem;
+}
+
+.account-card h2 {
+  margin-top: 0;
+}
+
+.role-pill {
+  display: inline-flex;
+  margin-top: 0.75rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: #ecfeff;
+  color: #0f766e;
+  font-weight: 700;
+}
+
+.error-banner {
+  margin-top: 1rem;
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.loading-state {
+  text-align: center;
+  color: #6b7280;
+}
+
+@media (max-width: 720px) {
+  .admin-hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -12,3 +12,4 @@ D:\Capstone\EventManagementDataAccessLayer\obj\Debug\net8.0\refint\EventManageme
 D:\Capstone\EventManagementDataAccessLayer\obj\Debug\net8.0\EventManagementDataAccessLayer.pdb
 D:\Capstone\EventManagementDataAccessLayer\obj\Debug\net8.0\EventManagementDataAccessLayer.genruntimeconfig.cache
 D:\Capstone\EventManagementDataAccessLayer\obj\Debug\net8.0\ref\EventManagementDataAccessLayer.dll
+D:\Capstone\EventManagementDataAccessLayer\obj\Debug\net8.0\EventManagementDataAccessLayer.sourcelink.json

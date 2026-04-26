@@ -72,3 +72,4 @@ D:\Capstone\EventManagementServices\obj\Debug\net8.0\EventManagementServices.pdb
 D:\Capstone\EventManagementServices\obj\Debug\net8.0\EventManagementServices.genruntimeconfig.cache
 D:\Capstone\EventManagementServices\obj\Debug\net8.0\ref\EventManagementServices.dll
 D:\Capstone\EventManagementServices\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Capstone\EventManagementServices\obj\Debug\net8.0\EventManagementServices.sourcelink.json

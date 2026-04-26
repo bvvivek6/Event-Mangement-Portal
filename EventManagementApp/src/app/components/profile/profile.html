@@ -1,6 +1,9 @@
-<div class="profile-container" *ngIf="!loading">
+<div class="profile-container" *ngIf="!loading && userProfile">
     <div class="profile-header">
-        <h2>User Profile</h2>
+        <div>
+            <h2>{{ currentRole }} Profile</h2>
+            <p class="profile-role">{{ userProfile.role }}</p>
+        </div>
         <button class="logout-btn" (click)="logout()">Logout</button>
     </div>
 
@@ -10,22 +13,26 @@
     <div class="profile-details">
         <div class="detail-group">
             <label>Name:</label>
-            <p>{{ userProfile?.firstname }} {{ userProfile.lastname }}</p>
+            <p>{{ userProfile?.firstname }} {{ userProfile?.lastname }}</p>
         </div>
         <div class="detail-group">
             <label>Email:</label>
-            <p>{{ userProfile.email }}</p>
+            <p>{{ userProfile?.email }}</p>
         </div>
         <div class="detail-group">
             <label>Phone:</label>
-            <p>{{ userProfile.phone || 'N/A' }}</p>
+            <p>{{ userProfile?.phone || 'N/A' }}</p>
         </div>
         <div class="detail-group">
             <label>Bio:</label>
-            <p>{{ userProfile.bio || 'No bio available' }}</p>
+            <p>{{ userProfile?.bio || 'No bio available' }}</p>
+        </div>
+        <div class="detail-group" *ngIf="userProfile?.organizationname">
+            <label>Organization:</label>
+            <p>{{ userProfile.organizationname }}</p>
         </div>
     </div>
 </div>
-<div class="loading" *ngIf="!loading">
+<div class="loading" *ngIf="loading">
     <p>Loading profile...</p>
 </div>

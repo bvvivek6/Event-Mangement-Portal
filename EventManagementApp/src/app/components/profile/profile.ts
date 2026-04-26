@@ -14,6 +14,7 @@ export class Profile implements OnInit {
   errorMessage = '';
   successMessage = '';
   loading: boolean = true;
+  currentRole = '';
 
   constructor(
     private authService: Auth,
@@ -21,6 +22,7 @@ export class Profile implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.currentRole = this.authService.getRole() ?? '';
     this.loadProfile();
   }
 
@@ -33,12 +35,16 @@ export class Profile implements OnInit {
       },
       error: (err) => {
         console.error('Failed to load profile', err);
+        this.errorMessage = err?.error?.message ?? 'Failed to load profile';
+        this.loading = false;
         this.router.navigate(['/login']);
       },
     });
   }
   logout(): void {
-    this.authService.logout();
-    this.router.navigate(['/login']);
+    this.authService.logout().subscribe({
+      next: () => this.router.navigate(['/login']),
+      error: () => this.router.navigate(['/login']),
+    });
   }
 }

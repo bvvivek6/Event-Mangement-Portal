@@ -6,6 +6,17 @@
         </div>
 
         <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+            <div class="form-group" *ngIf="showRoleSelector">
+                <label for="role">Account type</label>
+                <select id="role" name="role" [(ngModel)]="loginData.role" class="form-control">
+                    <option value="User">User</option>
+                </select>
+            </div>
+
+            <div class="role-chip" *ngIf="presetRole">
+                {{ presetRole }} login
+            </div>
+
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" [(ngModel)]="loginData.email" required #email="ngModel"

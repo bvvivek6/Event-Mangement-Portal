@@ -22,6 +22,12 @@
   color: #1f2937;
 }
 
+.profile-role {
+  margin: 0.35rem 0 0;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
 .logout-btn {
   background-color: #ef4444;
   color: white;

@@ -1,0 +1,30 @@
+<section class="organizer-shell" *ngIf="!loading; else loadingState">
+    <header class="organizer-hero">
+        <div>
+            <p class="eyebrow">Organizer console</p>
+            <h1>{{ profile?.organizationname || 'Organizer' }} portal</h1>
+            <p>Restricted workspace for managing events and venue details.</p>
+        </div>
+
+        <div class="hero-actions">
+            <a routerLink="/home" class="secondary-btn">Open home</a>
+            <button type="button" class="primary-btn" (click)="logout()">Logout</button>
+        </div>
+    </header>
+
+    <div *ngIf="errorMessage" class="error-banner">{{ errorMessage }}</div>
+
+    <section class="account-card" *ngIf="profile">
+        <h2>Signed in as</h2>
+        <p>{{ profile.firstname }} {{ profile.lastname }}</p>
+        <p>{{ profile.email }}</p>
+        <p>{{ profile.city }}, {{ profile.state }}</p>
+        <p class="role-pill">Organizer</p>
+    </section>
+</section>
+
+<ng-template #loadingState>
+    <section class="organizer-shell loading-state">
+        <p>Loading dashboard...</p>
+    </section>
+</ng-template>

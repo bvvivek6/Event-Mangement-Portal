@@ -10,13 +10,23 @@
     <div class="right-panel">
         <div class="form-wrapper">
             <h2>Create your account</h2>
-            <p class="subtitle">Start exploring premium events</p>
+            <p class="subtitle">Create a user, organizer, or admin account</p>
 
             <div *ngIf="errorMessage" class="error-banner">
                 {{ errorMessage }}
             </div>
 
             <form (ngSubmit)="onSubmit()" #signupForm="ngForm">
+                <div class="input-group" *ngIf="showRoleSelector">
+                    <label>Account type</label>
+                    <select name="role" [(ngModel)]="signupData.role" required>
+                        <option value="User">User</option>
+                    </select>
+                </div>
+
+                <div class="role-chip" *ngIf="presetRole">
+                    {{ presetRole }} registration
+                </div>
 
                 <div class="row">
                     <div class="input-group">
@@ -42,7 +52,94 @@
 
                 <div class="input-group">
                     <label>Bio</label>
-                    <input type="text" name="bio" [(ngModel)]="signupData.bio" required>
+                    <input type="text" name="bio" [(ngModel)]="signupData.bio">
+                </div>
+
+                <div class="input-group" *ngIf="signupData.role === 'Organizer'">
+                    <label>Organization Name</label>
+                    <input type="text" name="organizationName" [(ngModel)]="signupData.organizationName" required>
+                </div>
+
+                <ng-container *ngIf="signupData.role === 'Organizer'">
+                    <div class="section-title">Organizer profile</div>
+
+                    <div class="input-group">
+                        <label>Profile Image URL</label>
+                        <input type="url" name="profileImageUrl" [(ngModel)]="signupData.profileImageUrl">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Banner Image URL</label>
+                        <input type="url" name="bannerImageUrl" [(ngModel)]="signupData.bannerImageUrl">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Contact Phone</label>
+                        <input type="text" name="contactPhone" [(ngModel)]="signupData.contactPhone" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Address Line</label>
+                        <input type="text" name="addressLine" [(ngModel)]="signupData.addressLine" required>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-group">
+                            <label>City</label>
+                            <input type="text" name="city" [(ngModel)]="signupData.city" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label>State</label>
+                            <input type="text" name="state" [(ngModel)]="signupData.state" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-group">
+                            <label>Country</label>
+                            <input type="text" name="country" [(ngModel)]="signupData.country" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Pincode</label>
+                            <input type="text" name="pincode" [(ngModel)]="signupData.pincode" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Website</label>
+                        <input type="url" name="website" [(ngModel)]="signupData.website">
+                    </div>
+
+                    <div class="row">
+                        <div class="input-group">
+                            <label>Facebook URL</label>
+                            <input type="url" name="facebookUrl" [(ngModel)]="signupData.facebookUrl">
+                        </div>
+
+                        <div class="input-group">
+                            <label>Twitter URL</label>
+                            <input type="url" name="twitterUrl" [(ngModel)]="signupData.twitterUrl">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-group">
+                            <label>Instagram URL</label>
+                            <input type="url" name="instagramUrl" [(ngModel)]="signupData.instagramUrl">
+                        </div>
+
+                        <div class="input-group">
+                            <label>LinkedIn URL</label>
+                            <input type="url" name="linkedInUrl" [(ngModel)]="signupData.linkedInUrl">
+                        </div>
+                    </div>
+                </ng-container>
+
+                <div class="input-group" *ngIf="signupData.role === 'Admin'">
+                    <label>Admin Registration Key</label>
+                    <input type="password" name="registrationKey" [(ngModel)]="signupData.registrationKey" required>
                 </div>
 
                 <div class="input-group">

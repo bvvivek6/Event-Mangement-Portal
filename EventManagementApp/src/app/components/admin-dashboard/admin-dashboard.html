@@ -1,0 +1,52 @@
+<section class="admin-shell" *ngIf="!loading; else loadingState">
+    <header class="admin-hero">
+        <div>
+            <p class="eyebrow">Admin console</p>
+            <h1>{{ dashboard?.admin?.firstname || 'Admin' }}'s dashboard</h1>
+            <p>Role-gated control panel for the event platform.</p>
+        </div>
+
+        <div class="hero-actions">
+            <a routerLink="/home" class="secondary-btn">Open home</a>
+            <button type="button" class="primary-btn" (click)="logout()">Logout</button>
+        </div>
+    </header>
+
+    <div *ngIf="errorMessage" class="error-banner">{{ errorMessage }}</div>
+
+    <section class="stats-grid" *ngIf="dashboard">
+        <article>
+            <span>Users</span>
+            <strong>{{ dashboard.stats.users }}</strong>
+        </article>
+        <article>
+            <span>Admins</span>
+            <strong>{{ dashboard.stats.admins }}</strong>
+        </article>
+        <article>
+            <span>Organizers</span>
+            <strong>{{ dashboard.stats.organizers }}</strong>
+        </article>
+        <article>
+            <span>Events</span>
+            <strong>{{ dashboard.stats.events }}</strong>
+        </article>
+        <article>
+            <span>Pending approvals</span>
+            <strong>{{ dashboard.stats.pendingEvents }}</strong>
+        </article>
+    </section>
+
+    <section class="account-card" *ngIf="dashboard">
+        <h2>Signed in as</h2>
+        <p>{{ dashboard.admin?.firstname }} {{ dashboard.admin?.lastname }}</p>
+        <p>{{ dashboard.admin?.email }}</p>
+        <p class="role-pill">{{ dashboard.role }}</p>
+    </section>
+</section>
+
+<ng-template #loadingState>
+    <section class="admin-shell loading-state">
+        <p>Loading dashboard...</p>
+    </section>
+</ng-template>
